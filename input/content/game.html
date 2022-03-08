@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% set entry =  {
+	"title": "Minecraft",
+	"subtitle": "Java Edition",
+	"art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49x5.png",
+	"rating": "good",
+} %}
+
+{% block content %}
+<div class="page" id="game-entry">
+	<h1 class="title">
+		{{ entry.title }}
+		<small class="subtitle">{{ entry.subtitle }}</small>
+	</h1>
+
+	<div class="content">
+		<img class="art" src="{{ entry.art }}">
+
+		<div class="side">
+			<div class="rating {{ entry.rating }}">{{ entry.rating }}</div>
+
+			<div class="rating-tags">
+				<div class="tag good">One-time purchase</div>
+				<div class="tag warn" title="Unofficial services may require payment in any form">3rd party content</div>
+			</div>
+
+			<div>
+				<a class="button">Official website</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page" id="reviews">
+	<p>Reviews</p>
+
+	<div class="entry">
+		<div class="meta">
+			<div class="profile">
+				<img class="avatar" src="https://github.com/linus.png">
+				<div class="username">Cool guy</div>
+			</div>
+			<time title="2022-02-02 14:35:12">3 days ago</time>
+		</div>
+
+		<div class="content">
+			<div class="comment">
+				Been playing this game for more than 10 years. Can confirm it's safe.
+				Would recommend to everyone.
+			</div>
+			<div class="rating-tags">
+				<div class="tag">One-time purchase</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="entry">
+		<div class="meta">
+			<div class="profile">
+				<img class="avatar" src="https://github.com/hot.png">
+				<div class="username">Hot guy</div>
+			</div>
+			<time title="2021-12-02 14:35:14">2 months ago</time>
+		</div>
+
+		<div class="content">
+			<div class="comment">
+				I thought there were no in-game payment but while playing some pvp
+				server, a lot of players were better than me because they were donating
+				every month..... does that count??
+			</div>
+			<div class="rating-tags">
+				<div class="tag">3rd party content</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

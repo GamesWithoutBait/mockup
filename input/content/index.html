@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% set entries = [
+	{
+		"title": "Minecraft",
+		"subtitle": "Java Edition",
+		"art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49x5.png",
+		"rating": "good",
+	},
+	{
+		"title": "Rocket League",
+		"art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4cfe.png",
+		"rating": "meh",
+	},
+] %}
+
+{% block content %}
+<div id="main-search" class="page">
+	<p>Search games</p>
+	<input placeholder="type a game name here...">
+</div>
+
+<p style="text-align: center">Browse games</p>
+<p class="page">Sort | Filter</p>
+<div id="game-entries" class="page">
+	{% for entry in entries %}
+	<div class="entry">
+
+		<div class="rating {{ entry.rating }}">{{ entry.rating }}</div>
+
+		<img class="art" src="{{ entry.art }}">
+
+		<div class="side">
+
+			<div class="content">
+				<a class="title" href="./game.html">
+					{{ entry.title }}
+					<div class="subtitle">
+						{{ entry.subtitle }}
+					</div>
+				</a>
+
+				<div class="rating-tags">
+					{% if entry.title == "Minecraft" %}
+					<div class="tag good">One-time purchase</div>
+					<div class="tag warn" title="Unofficial services may require payment in any form">3rd party content</div>
+					{% elif entry.title == "Rocket League" %}
+					<div class="tag good">Free-to-play</div>
+					<div class="tag warn">Premium currency</div>
+					<div class="tag warn">Lootboxes</div>
+					<div class="tag warn">Seasonal pass</div>
+					{% endif %}
+				</div>
+
+			</div>
+
+			<div>
+				<a class="button" href="./game.html">See details</a>
+				<a class="button">Official website</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}
