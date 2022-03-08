@@ -14,3 +14,14 @@
 	background: orange;
 }
 
+.rating-tags .tag.good .icon {
+	color: green;
+}
+
+.rating-tags .tag.meh .icon {
+	color: orange;
+}
+
+.rating-tags .tag.bad .icon {
+	color: red;
+}

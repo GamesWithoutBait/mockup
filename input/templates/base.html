@@ -23,6 +23,9 @@
 			</div>
 
 			<div class="nav-items">
+				{% if not hide_search %}
+				<input class="search" placeholder="search game...">
+				{% endif %}
 				<a>link 1</a>
 				<a>link 2</a>
 				<a>link 3</a>

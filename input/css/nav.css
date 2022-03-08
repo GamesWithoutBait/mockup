@@ -21,3 +21,11 @@
 #nav .nav-items > * {
 	margin: 0 .75em;
 }
+
+#nav .search {
+	background: #353535;
+	border: none;
+	border-bottom: 1px solid gray;
+	padding: .5em 1em;
+	color: inherit;
+}

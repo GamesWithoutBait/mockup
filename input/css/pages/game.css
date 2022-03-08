@@ -23,6 +23,12 @@
 	width: 100%;
 }
 
+#game-entry .side {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 
 #game-entry .rating {
 	margin: auto;

@@ -69,3 +69,7 @@
 	padding: 1em;
 	justify-content: space-between;
 }
+
+#game-entries .button {
+	margin: 0 1em;
+}

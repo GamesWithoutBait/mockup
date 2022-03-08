@@ -18,11 +18,19 @@
 		<img class="art" src="{{ entry.art }}">
 
 		<div class="side">
-			<div class="rating {{ entry.rating }}">{{ entry.rating }}</div>
+			<div>
+				<div class="rating {{ entry.rating }}">{{ entry.rating }}</div>
 
-			<div class="rating-tags">
-				<div class="tag good">One-time purchase</div>
-				<div class="tag warn" title="Unofficial services may require payment in any form">3rd party content</div>
+				<div class="rating-tags">
+					<div class="tag good">
+						<span class="icon material-icons">check_circle</span>
+						One-time purchase
+					</div>
+					<div class="tag meh" title="Unofficial services may require payment in any form">
+						<span class="icon material-icons">warning</span>
+						3rd party content
+					</div>
+				</div>
 			</div>
 
 			<div>

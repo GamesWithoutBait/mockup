@@ -14,6 +14,8 @@
 	},
 ] %}
 
+{% set hide_search = true %}
+
 {% block content %}
 <div id="main-search" class="page">
 	<p>Search games</p>
@@ -42,13 +44,31 @@
 
 				<div class="rating-tags">
 					{% if entry.title == "Minecraft" %}
-					<div class="tag good">One-time purchase</div>
-					<div class="tag warn" title="Unofficial services may require payment in any form">3rd party content</div>
+					<div class="tag good">
+						<span class="icon material-icons">check_circle</span>
+						One-time purchase
+					</div>
+					<div class="tag meh" title="Unofficial services may require payment in any form">
+						<span class="icon material-icons">warning</span>
+						3rd party content
+					</div>
 					{% elif entry.title == "Rocket League" %}
-					<div class="tag good">Free-to-play</div>
-					<div class="tag warn">Premium currency</div>
-					<div class="tag warn">Lootboxes</div>
-					<div class="tag warn">Seasonal pass</div>
+					<div class="tag good">
+						<span class="icon material-icons">check_circle</span>
+						Free-to-play
+					</div>
+					<div class="tag bad">
+						<span class="icon material-icons">cancel</span>
+						Premium currency
+					</div>
+					<div class="tag bad">
+						<span class="icon material-icons">cancel</span>
+						Lootboxes
+					</div>
+					<div class="tag bad">
+						<span class="icon material-icons">cancel</span>
+						Seasonal pass
+					</div>
 					{% endif %}
 				</div>
 

@@ -32,3 +32,20 @@ a:visited {
 [title] {
 	text-decoration: underline dashed;
 }
+
+.material-icons {
+	position: relative;
+	top: .2em;
+	margin: 0 .2em;
+}
+
+button, .button {
+	display: inline-block;
+	padding: .2em 1em;
+	background: darkblue;
+	transition: .4s;
+}
+
+button:hover, .button:hover {
+	background: darkcyan;
+}
